@@ -1,0 +1,13 @@
+.model sottrattore2bit
+.inputs a0 a1 b0 b1 cin0 cin1
+.outputs out cout0 cout1 cout2
+.subckt inversione2bit i0=b0 i1=b1 out0=c0 out1=c1
+.subckt somma1 in=c0 cin=cin1 out=d0 cout=cout0
+.subckt somma1 in=c1 cin=cin1 out=d1 cout=cout1
+.subckt sommatore2bit a0=a0 a1=a1 b0=d0 b1=d1 cin=cin0 out=out cout=cout2
+
+.search sommatore2bit.blif
+.search inversione2bit.blif
+.search somma1.blif
+.search uno.blif
+.end

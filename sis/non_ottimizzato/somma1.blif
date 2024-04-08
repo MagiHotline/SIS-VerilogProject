@@ -1,0 +1,8 @@
+.model somma1
+.inputs in cin
+.outputs out cout 
+.subckt uno out=add1
+.subckt sommatore a=in b=add1 cin=cin out=out cout=cout
+.search uno.blif
+.search sommatore.blif
+.end

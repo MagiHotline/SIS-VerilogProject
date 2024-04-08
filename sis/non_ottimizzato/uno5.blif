@@ -1,0 +1,10 @@
+.model uno5
+.outputs o4 o3 o2 o1 o0
+.subckt zero out=o4;
+.subckt zero out=o3;
+.subckt zero out=o2;
+.subckt zero out=o1;
+.subckt uno out=o0;
+.search uno.blif
+.search zero.blif
+.end

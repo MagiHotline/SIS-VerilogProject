@@ -1,0 +1,9 @@
+.model demux2uscite
+#demux con entrata a 2 bit e 2 uscite
+.inputs sel in1 in0
+.outputs o1 o0
+.names sel in1 in0 o0
+0-- 1  
+.names sel in1 in0 o1
+1-- 1 
+.end

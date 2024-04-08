@@ -1,0 +1,9 @@
+.model demux1
+#demux sel da 1 bit e entrata e uscita con 2 bit
+.inputs sel in
+.outputs o1 o0
+.names sel in o1
+01 1
+.names sel in o0
+11 1
+.end

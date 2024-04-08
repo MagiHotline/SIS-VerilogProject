@@ -1,0 +1,12 @@
+.model datapath1
+.inputs a0 a1 b0 b1 sel cin0 cin1
+.outputs outSomma outDiff cout
+.subckt sommatore2bit a0=a0 a1=a1 b0=b1 b1=b1 cin=cin out=outSomma cout=cout 
+.subckt sottrattore2bit a0=a0 a1=a1 b0=b1 b1=b1 cin0=cin0 cin1=cin1 out=outDiff cout=cout 
+.subckt mux1 sel=sel i0=outSomma i1=outDiff 
+
+.search sommatore2bit.blif
+.search mux1.blif
+.search sottrattore2bit.blif
+
+.end

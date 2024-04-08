@@ -1,0 +1,14 @@
+.model SOTTRATTORE
+.inputs A B CIN
+.outputs O COUT
+.names A B CIN O
+001 1
+010 1
+100 1
+111 1
+.names A B CIN COUT
+001 1
+010 1
+011 1
+111 1
+.end

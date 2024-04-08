@@ -1,0 +1,10 @@
+.model MUX5
+.inputs S1 S0 a4 a3 a2 a1 a0 b4 b3 b2 b1 b0 c4 c3 c2 c1 c0 d4 d3 d2 d1 d0
+.outputs o4 o3 o2 o1 o0
+.subckt MUX1 S1=S1 S0=S0 a=a4 b=b4 c=c4 d=d4 out=o4
+.subckt MUX1 S1=S1 S0=S0 a=a3 b=b3 c=c3 d=d3 out=o3
+.subckt MUX1 S1=S1 S0=S0 a=a2 b=b2 c=c2 d=d2 out=o2
+.subckt MUX1 S1=S1 S0=S0 a=a1 b=b1 c=c1 d=d1 out=o1
+.subckt MUX1 S1=S1 S0=S0 a=a0 b=b0 c=c0 d=d0 out=o0
+.search MUX1.blif
+.end

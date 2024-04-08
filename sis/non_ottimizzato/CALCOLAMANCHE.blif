@@ -1,0 +1,18 @@
+.model CALCOLAMANCHE
+.inputs primo1 primo0 secondo1 secondo0
+.outputs manche1 manche0
+.names primo1 primo0 secondo1 secondo0 manche1
+0101 1
+1111 1
+1010 1 
+0110 1 
+1011 1
+1101 1 
+.names primo1 primo0 secondo1 secondo0 manche0
+0101 1
+1111 1
+1010 1
+1001 1
+1110 1
+0111 1
+.end

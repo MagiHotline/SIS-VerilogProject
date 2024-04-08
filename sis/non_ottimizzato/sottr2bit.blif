@@ -1,0 +1,7 @@
+.model sottr2bit
+.inputs a0 a1 b0 b1 cin 
+.outputs o0 o1 cout
+.subckt sottr a=a0 b=b0 cin=cin out=o0 cout=c0
+.subckt sottr a=a1 b=b1 cin=c0 out=o1 cout=cout
+.search sottr.blif
+.end

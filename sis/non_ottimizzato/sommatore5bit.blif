@@ -1,0 +1,10 @@
+.model sommatore5bit
+.inputs a4 a3 a2 a1 a0 b4 b3 b2 b1 b0 cin
+.outputs o4 o3 o2 o1 o0 cout
+.subckt sommatore a=a0 b=b0 cin=cin out=o0 cout=c0
+.subckt sommatore a=a1 b=b1 cin=c0 out=o1 cout=c1
+.subckt sommatore a=a2 b=b2 cin=c1 out=o2 cout=c2
+.subckt sommatore a=a3 b=b3 cin=c2 out=o3 cout=c3
+.subckt sommatore a=a4 b=b4 cin=c3 out=o4 cout=cout
+.search sommatore.blif
+.end

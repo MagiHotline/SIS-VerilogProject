@@ -1,0 +1,16 @@
+.model demux2
+.inputs sel in1 in0 
+.outputs o3 o2 o1 o0
+.names sel in1 in0 o3
+010 1 
+011 1
+.names sel in1 in0 o2
+001 1
+011 1
+.names sel in1 in0 o1 
+110 1
+111 1 
+.names sel in1 in0 o0
+101 1
+111 1
+.end

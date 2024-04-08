@@ -1,0 +1,7 @@
+.model MUX1SEL2
+.inputs sel a1 a0 b1 b0
+.outputs o1 o0
+.subckt MUX1SEL sel=sel a=a1 b=b1 o=o1
+.subckt MUX1SEL sel=sel a=a0 b=b0 o=o0
+.search MUX1SEL.blif
+.end

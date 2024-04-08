@@ -1,0 +1,14 @@
+.model demux4uscite1
+#modello per fare quello con 5 bit
+.inputs S1 S0 in
+.outputs o3 o2 o1 o0 
+.names S1 S0 in o3 
+001 1 
+.names S1 S0 in o2
+011 1
+.names S1 S0 in o1
+101 1
+.names S1 S0 in o0
+111 1
+.end
+

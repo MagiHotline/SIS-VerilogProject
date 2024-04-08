@@ -1,0 +1,13 @@
+.model sottr
+.inputs a b cin
+.outputs out cout
+# Ris sta per "Risultato"
+.names a b ris
+01 1
+10 1 
+.names ris cin out
+01 1
+.names cin a b cout
+001 1 
+111 1
+.end

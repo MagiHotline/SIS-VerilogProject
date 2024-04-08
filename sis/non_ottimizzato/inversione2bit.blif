@@ -1,0 +1,7 @@
+.model inversione2bit
+.inputs i0 i1 
+.outputs out0 out1
+.subckt inversione in=i0 out=out0
+.subckt inversione in=i1 out=out1
+.search inversione.blif
+.end
