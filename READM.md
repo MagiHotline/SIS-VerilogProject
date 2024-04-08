@@ -1,1 +1,0 @@
-This is a repository I made for the Computer Architecture project I made in the academic year of 2023/2024 in University of Verona. It was made with one of my collegues who helped me through this project.
