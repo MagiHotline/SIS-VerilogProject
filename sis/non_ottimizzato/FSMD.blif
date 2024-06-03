@@ -1,11 +1,10 @@
 .model FSMD
-.inputs PRIMO1 PRIMO0 SECONDO1 SECONDO0 INIZIA 
+.inputs INIZIA PRIMO1 PRIMO0 SECONDO1 SECONDO0
 .outputs MANCHE1 MANCHE0 PARTITA1 PARTITA0
 
-.subckt ELABORAZIONE primo1=PRIMO1 primo0=PRIMO0 secondo1=SECONDO1 secondo0=SECONDO0 inizia=INIZIA outinizia=SENDINIZIA manche1=MANCHE1 manche0=MANCHE0 FSMmanche1=SMANCHE1 FSMmanche0=SMANCHE0 obblig=OBB 
-.subckt CONTROLLORE inizia=SENDINIZIA manche1=SMANCHE1 manche0=SMANCHE0 obblig=OBB partita1=PARTITA1 partita0=PARTITA0 
+.subckt ELABORAZIONE inizia=INIZIA primo1=PRIMO1 primo0=PRIMO0 secondo1=SECONDO1 secondo0=SECONDO0 outinizia=control manche1=MANCHE1 manche0=MANCHE0 FSMmanche1=SMANCHE1 FSMmanche0=SMANCHE0 obblig=OBB
+.subckt CONTROLLORE inizia=control manche1=SMANCHE1 manche0=SMANCHE0 obblig=OBB partita1=PARTITA1 partita0=PARTITA0
 
-.search CONTROLLORE.blif 
+.search CONTROLLORE.blif
 .search ELABORAZIONE.blif
 .end
-
