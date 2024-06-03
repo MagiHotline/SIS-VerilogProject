@@ -1,155 +1,131 @@
 .model CONTROLLORE
-.inputs inizia manche1 manche0 obblig
+.inputs inizia control manche1 manche0 obblig
 .outputs partita1 partita0
-.latch    [1250] LatchOut_v4   0
-.latch    [1251] LatchOut_v5   1
-.latch    [1252] LatchOut_v6   1
-.latch    [1253] LatchOut_v7   0
+.latch    [19] LatchOut_v5   0
+.latch    [20] LatchOut_v6   0
+.latch    [21] LatchOut_v7   0
 .start_kiss
-.i 4
+.i 5
 .o 2
-.p 40
-.s 9
-.r START
----- START NOADV 00
-000- NOADV NOADV 00
-011- NOADV NOADV 00
-001- NOADV VPUUNO 00
-010- NOADV VPUDUE 00
-1--- NOADV WIN 11
-000- VPUUNO VPUUNO 00
-011- VPUUNO VPUUNO 00
-010- VPUUNO NOADV 00
-001- VPUUNO VPDUNO 00
-1--- VPUUNO WIN 11
-000- VPUDUE VPUDUE 00
-011- VPUDUE VPUDUE 00
-001- VPUDUE NOADV 00
-010- VPUDUE VPDDUE 00
-1--- VPUDUE WIN 11
-0--- WIN WIN --
-1--- WIN START --
-000- VPDUNO VPDUNO 00
-011- VPDUNO VPDUNO 00
-0011 VPDUNO VPTUNO 00
-010- VPDUNO VPUUNO 00
-1--0 VPDUNO WIN 01
-0010 VPDUNO WIN 01
-000- VPDDUE VPDDUE 00
-011- VPDDUE VPDDUE 00
-001- VPDDUE VPUDUE 00
-0101 VPDDUE VPTDUE 00
-1--0 VPDDUE WIN 10
-0100 VPDDUE WIN 10
-000- VPTUNO VPTUNO 00
-011- VPTUNO VPTUNO 00
-0011 VPTUNO VPTUNO 00
-010- VPTUNO VPDUNO 00
-0010 VPTUNO WIN 01
-000- VPTDUE VPTDUE 00
-011- VPTDUE VPTDUE 00
-0101 VPTDUE VPTDUE 00
-001- VPTDUE VPDDUE 00
-0100 VPTDUE WIN 01
+.p 48
+.s 8
+.r STARTEND
+-1--- STARTEND STARTEND --
+-0--- STARTEND NOADV 00
+0000- NOADV NOADV 00
+0011- NOADV NOADV 00
+0001- NOADV VPUUNO 00
+0010- NOADV VPUDUE 00
+-1--- NOADV STARTEND 11
+1---- NOADV STARTEND 11
+0000- VPUUNO VPUUNO 00
+0011- VPUUNO VPUUNO 00
+00011 VPUUNO VPDUNO 00
+0010- VPUUNO NOADV 00
+00010 VPUUNO STARTEND 01
+-1--- VPUUNO STARTEND 11
+1---- VPUUNO STARTEND 11
+0000- VPUDUE VPUDUE 00
+0011- VPUDUE VPUDUE 00
+0001- VPUDUE NOADV 00
+00101 VPUDUE VPDDUE 00
+-1--- VPUDUE STARTEND 11
+1---- VPUDUE STARTEND 11
+00100 VPUDUE STARTEND 10
+0000- VPDUNO VPDUNO 00
+0011- VPDUNO VPDUNO 00
+0010- VPDUNO VPUUNO 00
+00011 VPDUNO VPTUNO 00
+00010 VPDUNO STARTEND 01
+-1--- VPDUNO STARTEND 01
+1---- VPDUNO STARTEND 01
+0000- VPDDUE VPDDUE 00
+0011- VPDDUE VPDDUE 00
+0001- VPDDUE VPUDUE 00
+00101 VPDDUE VPTDUE 00
+-1--- VPDDUE STARTEND 10
+1---- VPDDUE STARTEND 10
+00100 VPDDUE STARTEND 10
+0000- VPTUNO VPTUNO 00
+0010- VPTUNO STARTEND 01
+0011- VPTUNO STARTEND 01
+0001- VPTUNO STARTEND 01
+-1--- VPTUNO STARTEND 01
+1---- VPTUNO STARTEND 01
+0000- VPTDUE VPTDUE 00
+0010- VPTDUE STARTEND 10
+0001- VPTDUE STARTEND 10
+0011- VPTDUE STARTEND 10
+-1--- VPTDUE STARTEND 10
+1---- VPTDUE STARTEND 10
 .end_kiss
-.latch_order LatchOut_v4 LatchOut_v5 LatchOut_v6 LatchOut_v7
-.code START 0110
-.code NOADV 1001
-.code VPUUNO 1000
-.code VPUDUE 1100
-.code WIN 0100
-.code VPDUNO 0000
-.code VPDDUE 1101
-.code VPTUNO 0001
-.code VPTDUE 0101
-.names inizia manche1 manche0 LatchOut_v4 LatchOut_v5 LatchOut_v6 LatchOut_v7 \
-[1250]
------1- 1
-0111--- 1
-0001--- 1
-0--10-1 1
-001-1-1 1
-0101--0 1
-010-0-0 1
-00111-0 1
-.names inizia manche1 manche0 obblig LatchOut_v4 LatchOut_v5 LatchOut_v6 \
-LatchOut_v7 [1251]
-1---1--- 1
---0-11-- 1
--1---10- 1
-----010- 1
-1-----00 1
--10-1--1 1
--01000-- 1
-001--1-1 1
-.names inizia LatchOut_v4 LatchOut_v5 LatchOut_v6 [1252]
-1010 1
-.names inizia manche1 manche0 obblig LatchOut_v4 LatchOut_v5 LatchOut_v6 \
-LatchOut_v7 [1253]
-------1- 1
-011----1 1
-000----1 1
---01-1-1 1
--0--01-1 1
--01100-- 1
-010-1--0 1
-001-11-0 1
-.names inizia manche1 manche0 obblig LatchOut_v4 LatchOut_v5 LatchOut_v7 \
-partita1
-1---1-- 1
--100111 1
-.names inizia manche1 manche0 obblig LatchOut_v4 LatchOut_v5 LatchOut_v6 \
+.latch_order LatchOut_v5 LatchOut_v6 LatchOut_v7
+.code STARTEND 000
+.code NOADV 001
+.code VPUUNO 100
+.code VPUDUE 010
+.code VPDUNO 101
+.code VPDDUE 011
+.code VPTUNO 111
+.code VPTDUE 110
+.names inizia control manche1 manche0 obblig LatchOut_v5 LatchOut_v6 \
+LatchOut_v7 [19]
+0000-1-- 1
+0011-10- 1
+00-0-101 1
+0001110- 1
+0001-001 1
+00101011 1
+.names inizia control manche1 manche0 obblig LatchOut_v5 LatchOut_v6 \
+LatchOut_v7 [20]
+0000--1- 1
+0011-01- 1
+00-1-011 1
+0010-001 1
+00101011 1
+00011101 1
+00101010 1
+.names inizia control manche1 manche0 obblig LatchOut_v5 LatchOut_v6 \
+LatchOut_v7 [21]
+-0---000 1
+0000---1 1
+0011-0-1 1
+0011--01 1
+0001-0-0 1
+0010--00 1
+0001110- 1
+00101010 1
+.names inizia control manche1 manche0 obblig LatchOut_v5 LatchOut_v6 \
+LatchOut_v7 partita1
+-1---0-- 1
+-1-----0 1
+1----0-1 1
+1-----10 1
+--1--110 1
+---1-110 1
+1----100 1
+--10001- 1
+.names inizia control manche1 manche0 obblig LatchOut_v5 LatchOut_v6 \
 LatchOut_v7 partita0
-1----0-- 1
-1-----00 1
--01000-- 1
--10001-1 1
+-1----0- 1
+1----1-1 1
+-1---1-1 1
+1-----01 1
+-1---0-0 1
+--1--111 1
+---1-111 1
+1----010 1
+1----100 1
+--01010- 1
 .exdc 
-.inputs inizia manche1 manche0 obblig LatchOut_v4 LatchOut_v5 LatchOut_v6 \
+.inputs inizia control manche1 manche0 obblig LatchOut_v5 LatchOut_v6 \
 LatchOut_v7
-.outputs [1250] [1251] [1252] [1253] partita1 partita0
-.names inizia obblig LatchOut_v4 LatchOut_v5 LatchOut_v6 LatchOut_v7 [1250]
---1-1- 1
----01- 1
-----11 1
-1-0--1 1
-1100-- 1
-11-1-1 1
-.names inizia obblig LatchOut_v4 LatchOut_v5 LatchOut_v6 LatchOut_v7 [1251]
---1-1- 1
----01- 1
-----11 1
-1-0--1 1
-1100-- 1
-11-1-1 1
-.names inizia obblig LatchOut_v4 LatchOut_v5 LatchOut_v6 LatchOut_v7 [1252]
---1-1- 1
----01- 1
-----11 1
-1-0--1 1
-1100-- 1
-11-1-1 1
-.names inizia obblig LatchOut_v4 LatchOut_v5 LatchOut_v6 LatchOut_v7 [1253]
---1-1- 1
----01- 1
-----11 1
-1-0--1 1
-1100-- 1
-11-1-1 1
-.names inizia obblig LatchOut_v4 LatchOut_v5 LatchOut_v6 LatchOut_v7 partita1
---1-1- 1
----01- 1
-----11 1
-1-0--1 1
-1100-- 1
-11-1-1 1
---0100 1
-.names inizia obblig LatchOut_v4 LatchOut_v5 LatchOut_v6 LatchOut_v7 partita0
---1-1- 1
----01- 1
-----11 1
-1-0--1 1
-1100-- 1
-11-1-1 1
---0100 1
+.outputs [19] [20] [21] partita1 partita0
+.names [19]
+.names [20]
+.names [21]
+.names control LatchOut_v5 LatchOut_v6 LatchOut_v7 partita1
+1000 1
+.names control LatchOut_v5 LatchOut_v6 LatchOut_v7 partita0
+1000 1
 .end
